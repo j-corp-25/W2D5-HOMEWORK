@@ -21,14 +21,26 @@ class Flight
   end
 
   def board_passenger(passenger)
-    if (passenger.has_flight?(@flight_number)
-      @passengers << self.passenger(passenger)
+    if (passenger.has_flight?(@flight_number) && !full?)
+      @passengers << passenger
     end
-
   end
 
+  def list_passengers
+    passenger_names = []
+    @passengers.each do |passenger|
+      passenger_names << passenger.name
+    end
+    return passenger_names
+  end
 
+  def [](number)
+    return @passengers[number]
+  end
 
+  def <<(passenger)
+    board_passenger(passenger)
+  end
 
 
 end
