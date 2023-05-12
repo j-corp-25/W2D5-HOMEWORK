@@ -1,0 +1,22 @@
+.body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.h1 {
+    font-size: 38px;
+}
+.h2 {
+    font-size: 32px;
+}
+
+#ingredients_list {
+    list-style: square;
+}
+
+.header > img {
+    width: 100px;
+}
+.ul > li > a {
+    text-decoration: none;
+    color: inherit;
+}
