@@ -1,3 +1,6 @@
+require "passenger"
+
+
 class Flight
   def initialize(string,number)
     @flight_number = string
@@ -17,11 +20,12 @@ class Flight
     end
   end
 
-  def board_passenger(new_passenger)
-    
-    if self.(new_passenger).include?(@flight_number)
-      @passengers << new_passenger
+  def board_passenger(passenger)
+    if (passenger.has_flight?(@flight_number)
+      @passengers << self.passenger(passenger)
+    end
 
+  end
 
 
 
